@@ -15,7 +15,7 @@ DEFAULT_PREFIX = os.getenv('DEFAULT_PREFIX')
 prefixes = Prefixes(default=DEFAULT_PREFIX)
 
 
-def prefix(client: commands.Bot, message: discord.Message) -> tuple:
+def prefix(client: commands.Bot, message: discord.Message):
     return prefixes.get_prefix(message.author.id)[1], DEFAULT_PREFIX
 
 client = commands.Bot(prefix)
